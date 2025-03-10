@@ -67,7 +67,8 @@ st.header("Informações Gerais")
 dados = {"geral": {chave: st.text_input(chave) for chave in ["Complexo Eólico", "Número da Turbina", "Inspetor", "Motivo da Parada"]}, "sistemas": {}}
 dados["geral"]["Data da Inspeção"] = st.date_input("Data da Inspeção").strftime("%d/%m/%Y")
 
-sistemas = ["Base", "Cubiculo MT", "Torre", "Elevador Principal", "Escada Vertical", "Linha de Vida", "YAW", "Transformador", "Conversores de Potência", "Estrutura da Nacele", "Guincho de Serviço", "Sensores Ambientais", "Sistema de Arrefecimento", "Sistema de Freio", "Gerador", "Pitch", "Sistema de Lubrificação", "Pás"]
+sistemas = ["Base", "Cubiculo MT", "Torre", "Elevador Principal", "Escada Vertical", "Linha de Vida", "YAW", "Transformador", "Conversores de Potência",
+             "Estrutura da Nacele", "Guincho de Serviço", "Sensores Ambientais", "Sistema de Arrefecimento", "Sistema de Freio", "Gerador", "Pitch", "Sistema de Lubrificação", "Pás", "Outros"]
 for i, sistema in enumerate(sistemas):
     st.subheader(sistema)
     obs, stars = st.text_area(f"Observações", key=f"obs_{i}"), estrelas_clicaveis("Avaliação", key=f"stars_{i}")
